@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[project]
+name = "snmp_rp"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.urls]
+homepage = "example.com"
+documentation = "readthedocs.org"
+repository = "github.com"
+changelog = "github.com/me/spam/blob/master/CHANGELOG.md"
+
+
