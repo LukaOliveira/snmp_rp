@@ -4,12 +4,23 @@ build-backend = "maturin"
 
 [project]
 name = "snmp_rp"
+version = "0.3.0"
 requires-python = ">=3.7"
+readme = "README.rst"
+description = "A SNMP Libray based in Rust SNMP"
+keywords = ["SNMP", "Rust", "SNMPv2", "get", "OID"]
 classifiers = [
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: MIT License "
 ]
+authors = [
+  {email = "pedrolukaoliveira@protonmail.com"},
+  {name = "Luka Oliveira"}
+]
+license = {text = "MIT License (MIT)"}
+
 
 [project.urls]
 homepage = "https://github.com/LukaOliveira/snmp_rp"
