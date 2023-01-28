@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "snmp_rp"
-version = "0.3.0"
+version = "0.3.1"
 requires-python = ">=3.7"
 readme = "README.rst"
 description = "A SNMP Libray based in Rust SNMP"
@@ -19,7 +19,6 @@ authors = [
   {email = "pedrolukaoliveira@protonmail.com"},
   {name = "Luka Oliveira"}
 ]
-license = {text = "MIT License (MIT)"}
 
 
 [project.urls]
