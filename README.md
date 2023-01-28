@@ -1,15 +1,15 @@
 
 # SNMP-RP
 
-Uma biblioteca SNMP Python desenvolvida em Rust utilizando PyO3.
+A Python SNMP library developed in Rust with PyO3.
 
 
 
 
 ## Documentação
 
-O SNMP-RP é uma biblioteca com o objetivo de ser uma interface entre a biblioteca [SNMP](https://docs.rs/snmp/latest/snmp/) pertecente a linguagem Rust, e o Python, assim trazendo agilidade, desempenho e segurança de Rust e a simplicidade e praticidade de Python.
-
+SNMP-RP is intended to be an interface between [Rust SNMP](https://github.com/hroi/rust-snmp/) pertecente and Python.
+Bringing compiled language performance and optimization to Python.
 
 
 
@@ -22,7 +22,7 @@ pip install snmp-rp
 
 
 
-## Uso/Exemplos
+## Examples
 
 
 
@@ -43,15 +43,14 @@ print(sys_descr)
 
 
 ## Roadmap
-
-- Implementar GETNEXT
-- Implementar GETBULK
-- Implementar SET
-
+- Add support for GETNEXT
+- Add support for GETBULK
+- Add support for SET
 
 
-## Licença
 
-Distribuido sob a licença MIT [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+## License
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 
