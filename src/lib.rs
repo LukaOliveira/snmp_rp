@@ -3,6 +3,14 @@ use std::time::Duration;
 use snmp::{SyncSession};
 
 
+
+/* 
+Convert a OID &str to Vec<u32>
+
+Input - 1.3.6.367.5.1
+Ouput - [1,3,6,367,5,1]
+
+*/
 pub fn parse_oid(oid: &str) -> Vec<u32>{
 
     return oid.split('.').map(|n| n.parse().unwrap()).collect()
@@ -10,6 +18,13 @@ pub fn parse_oid(oid: &str) -> Vec<u32>{
 }
 
 
+/* 
+Call the host
+
+Input  - OID, Host (IP), SNMP Port, SNMP Community
+Output - String containing the OID return type and value
+
+*/
 #[pyfunction]
 fn get(oid: &str, host: &str, port: &str, community: &str) -> PyResult<String>{
 
@@ -30,16 +45,15 @@ fn get(oid: &str, host: &str, port: &str, community: &str) -> PyResult<String>{
 
 	let mut response = sess.get(&oid).unwrap();	
 
-	for (_desc,val) in response.varbinds.next(){
+	if let Some((_desc,val)) = response.varbinds.next(){
 		snmp_get = (format!("{:?}", val)).to_string();
-		break;
 	}
 
     Ok(snmp_get)
 
 }
 
-/// A Python module implemented in Rust.
+
 #[pymodule]
 fn snmp_rp(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(get, m)?)?;
