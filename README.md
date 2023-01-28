@@ -15,7 +15,7 @@ O SNMP-RP é uma biblioteca com o objetivo de ser uma interface entre a bibliote
 
 
 ```python
-pip install snmp-rp
+https://pypi.org/project/snmp-rp/0.3.0/
 ```
 
 
